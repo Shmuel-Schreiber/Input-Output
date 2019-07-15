@@ -1,0 +1,32 @@
+<app-inputs
+    (fName)="fName=$event"
+    (lName)="lName=$event"
+    (num)="num=$event"
+    (le)="le=$event"
+    (saveRow)="saveRow(fName, lName, num, le)"
+    [ab]="ab"
+    [abnum]="abnum">
+</app-inputs>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Number</th>
+        <th>Some Random Letters</th>
+    </tr>
+    <tr>
+        <td>{{fName}}</td>
+        <td>{{lName}}</td>
+        <td>{{num}}</td>
+        <td>{{le}}</td>
+    </tr>
+    <tr *ngFor="let x of tabArray">
+        <td>{{x.fName}}</td>
+        <td>{{x.lName}}</td>
+        <td>{{x.num}}</td>
+        <td>{{x.le}}</td>
+    </tr>
+</table>
+<app-buttons
+(tab)="clear()"
+(inputs)="clearinp()"></app-buttons>

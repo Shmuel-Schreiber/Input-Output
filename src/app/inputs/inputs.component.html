@@ -1,0 +1,5 @@
+<input (input)="fName.emit($event.target.value)"/><br>
+<input (input)="lName.emit($event.target.value)"/><br>
+<input type="number" (input)="num.emit($event.target.value)"/><br>
+<input (input)="le.emit($event.target.value)"/><br>
+<button (click)="saveRow.emit('yo')">Save Row</button>
